@@ -15,6 +15,25 @@ export default function Contact() {
 
     const sendEmail = async () => {
         setLoading(true)
+
+        if (!mail.email) {
+            setMsg("Email is required")
+            setLoading(false)
+            return
+        }
+
+        if (!mail.subject) {
+            setMsg("Subject is required")
+            setLoading(false)
+            return
+        }
+
+        if (mail.message.length === 0) {
+            setMsg("Message is required")
+            setLoading(false)
+            return
+        }
+
         try {
             const res = await fetch('/api/send', {
                 method: 'POST',
@@ -24,6 +43,7 @@ export default function Contact() {
                 body: JSON.stringify(mail)
             })
             const data = await res.json()
+
             if (data.code !== 200) {
                 setMsg("An error ocurred, please try again.")
             } else {
@@ -120,9 +140,8 @@ export default function Contact() {
                                     <svg className="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
                                     </svg>
-                                    <span className="sr-only">Info</span>
                                     <div>
-                                        <span className="font-medium">Info !</span> {msg}
+                                        {msg}
                                     </div>
                                 </div>
                             )
@@ -130,7 +149,6 @@ export default function Contact() {
                     </div>
                 </form>
             </div>
-
         </section>
     );
 };
