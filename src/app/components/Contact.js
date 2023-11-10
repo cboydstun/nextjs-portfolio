@@ -7,9 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Contact() {
-
     const [mail, setMail] = useState({ email: "", subject: "", message: "" })
-
     const [loading, setLoading] = useState(false)
     const [msg, setMsg] = useState("")
 

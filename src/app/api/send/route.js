@@ -1,4 +1,4 @@
-import { EmailTemplate } from '../../components/email-template';
+import { EmailTemplate } from '../../components/EmailTemplate';
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
@@ -8,15 +8,17 @@ export async function POST(req) {
     /* data from client */
     const body = await req.json();
 
+    /* destructure data from client */ 
+    const { email, subject, message } = body;
+
     /* validate data from client */
-    if (!body.email || !body.subject || body.message.length === 0) {
+    if (!email || !subject || message.length === 0) {
         return NextResponse.json({ message: "Email, subject, and message are required" }, {
             status: 400
         })
     }
 
     /* send email */
-    const { email, subject, message } = body;
     try {
         const data = await resend.emails.send({
             from: 'Acme <onboarding@resend.dev>',
