@@ -8,7 +8,7 @@ export async function POST(req) {
     /* data from client */
     const body = await req.json();
 
-    /* destructure data from client */ 
+    /* destructure data from client */
     const { email, subject, message } = body;
 
     /* validate data from client */
@@ -21,7 +21,7 @@ export async function POST(req) {
     /* send email */
     try {
         const data = await resend.emails.send({
-            from: 'Acme <onboarding@resend.dev>',
+            from: 'Portfolio <portfolio@chrisboydstun.com>',
             to: ['chrisboydstun@gmail.com'],
             subject,
             react: EmailTemplate({ sender: email, description: message }),
