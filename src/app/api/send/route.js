@@ -9,7 +9,7 @@ export async function POST(req) {
     const body = await req.json();
 
     /* validate data from client */
-    if ( !body.subject || body.message.length === 0) {
+    if (!body.email || !body.subject || body.message.length === 0) {
         return NextResponse.json({ message: "Email, subject, and message are required" }, {
             status: 400
         })
@@ -22,7 +22,7 @@ export async function POST(req) {
             from: 'Acme <onboarding@resend.dev>',
             to: ['chrisboydstun@gmail.com'],
             subject,
-            react: EmailTemplate({ description: message }),
+            react: EmailTemplate({ sender: email, description: message }),
             text: ''
         });
         return NextResponse.json({ code: 200, data, message: "Email sent" }, { status: 200 });
