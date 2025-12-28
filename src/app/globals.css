@@ -164,3 +164,57 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #3b82f6, #06b6d4);
 }
+
+/* Navbar Sparkle Animation */
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+.sparkle-effect {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+/* Navbar Fade In Animation */
+@keyframes navbar-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-fade-in {
+  animation: navbar-fade-in 1s ease forwards;
+}
+
+/* Menu Overlay Animations */
+@keyframes overlay-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
