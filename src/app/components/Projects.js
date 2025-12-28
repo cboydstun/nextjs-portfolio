@@ -8,7 +8,8 @@ const projectsData = [
   {
     id: 1,
     title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, shopping cart, and payment integration.",
+    description:
+      "A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, shopping cart, and payment integration.",
     image: "/images/project.png",
     gitUrl: "https://github.com",
     previewUrl: "https://example.com",
@@ -18,7 +19,8 @@ const projectsData = [
   {
     id: 2,
     title: "Task Management App",
-    description: "Collaborative task management tool with real-time updates using Socket.io. Built with React, Express, and PostgreSQL.",
+    description:
+      "Collaborative task management tool with real-time updates using Socket.io. Built with React, Express, and PostgreSQL.",
     image: "/images/project.png",
     gitUrl: "https://github.com",
     previewUrl: "https://example.com",
@@ -28,7 +30,8 @@ const projectsData = [
   {
     id: 3,
     title: "AI Content Generator",
-    description: "AI-powered content generation tool leveraging OpenAI API. Features include text generation, image creation, and content optimization.",
+    description:
+      "AI-powered content generation tool leveraging OpenAI API. Features include text generation, image creation, and content optimization.",
     image: "/images/project.png",
     gitUrl: "https://github.com",
     previewUrl: "https://example.com",
@@ -38,7 +41,8 @@ const projectsData = [
   {
     id: 4,
     title: "Social Media Dashboard",
-    description: "Analytics dashboard for social media management with data visualization and reporting features.",
+    description:
+      "Analytics dashboard for social media management with data visualization and reporting features.",
     image: "/images/project.png",
     gitUrl: "https://github.com",
     previewUrl: "https://example.com",
@@ -48,7 +52,8 @@ const projectsData = [
   {
     id: 5,
     title: "Fitness Tracking App",
-    description: "Mobile-first fitness tracking application with workout plans, progress tracking, and nutrition logging.",
+    description:
+      "Mobile-first fitness tracking application with workout plans, progress tracking, and nutrition logging.",
     image: "/images/project.png",
     gitUrl: "https://github.com",
     previewUrl: "https://example.com",
@@ -58,7 +63,8 @@ const projectsData = [
   {
     id: 6,
     title: "Real Estate Portal",
-    description: "Property listing platform with advanced search filters, virtual tours, and contact management.",
+    description:
+      "Property listing platform with advanced search filters, virtual tours, and contact management.",
     image: "/images/project.png",
     gitUrl: "https://github.com",
     previewUrl: "https://example.com",
@@ -71,7 +77,7 @@ export default function Projects() {
   const [tag, setTag] = useState("All");
 
   const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
+    project.tag.includes(tag),
   );
 
   const handleTagChange = (newTag) => {
@@ -90,7 +96,8 @@ export default function Projects() {
           <span className="gradient-text">My Projects</span>
         </h2>
         <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-          Explore my latest work showcasing modern web development, innovative solutions, and creative problem-solving.
+          Explore my latest work showcasing modern web development, innovative
+          solutions, and creative problem-solving.
         </p>
       </motion.div>
 
@@ -114,7 +121,7 @@ export default function Projects() {
       </div>
 
       {/* Projects Grid */}
-      <motion.div 
+      <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
         layout
       >

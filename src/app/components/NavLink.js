@@ -1,5 +1,5 @@
 import Link from "next/link";
-export default function NavLink ({ href, title }) {
+export default function NavLink({ href, title }) {
   return (
     <Link
       href={href}
@@ -9,4 +9,4 @@ export default function NavLink ({ href, title }) {
       {title}
     </Link>
   );
-};
+}

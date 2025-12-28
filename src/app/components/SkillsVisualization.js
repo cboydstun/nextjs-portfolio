@@ -2,7 +2,17 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { SiReact, SiNodedotjs, SiJavascript, SiPostgresql, SiMongodb, SiExpress, SiTailwindcss, SiGit, SiDocker } from "react-icons/si";
+import {
+  SiReact,
+  SiNodedotjs,
+  SiJavascript,
+  SiPostgresql,
+  SiMongodb,
+  SiExpress,
+  SiTailwindcss,
+  SiGit,
+  SiDocker,
+} from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 
 const skills = [
@@ -66,7 +76,11 @@ export default function SkillsVisualization() {
                 <motion.div
                   initial={{ width: 0 }}
                   animate={inView ? { width: `${skill.level}%` } : {}}
-                  transition={{ duration: 1, delay: index * 0.1 + 0.3, ease: "easeOut" }}
+                  transition={{
+                    duration: 1,
+                    delay: index * 0.1 + 0.3,
+                    ease: "easeOut",
+                  }}
                   className="h-full rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 relative"
                 >
                   <div className="absolute inset-0 shimmer" />

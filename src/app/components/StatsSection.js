@@ -91,7 +91,9 @@ export default function StatsSection() {
               className="glass-morphism rounded-xl p-8 text-center hover-glow relative overflow-hidden group"
             >
               {/* Animated Background Gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+              />
 
               {/* Icon */}
               <motion.div
@@ -108,7 +110,9 @@ export default function StatsSection() {
               </div>
 
               {/* Label */}
-              <p className="text-gray-300 font-medium relative z-10">{stat.label}</p>
+              <p className="text-gray-300 font-medium relative z-10">
+                {stat.label}
+              </p>
 
               {/* Decorative Element */}
               <div className="absolute -bottom-2 -right-2 w-24 h-24 bg-gradient-to-br from-purple-500/10 to-transparent rounded-full blur-2xl" />
