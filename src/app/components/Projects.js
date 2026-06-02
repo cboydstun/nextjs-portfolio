@@ -7,13 +7,13 @@ import ProjectTag from "./ProjectTag";
 const projectsData = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "SATX Bounce Rentals",
     description:
-      "A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, shopping cart, and payment integration.",
-    image: "/images/project.png",
-    gitUrl: "https://github.com",
-    previewUrl: "https://example.com",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      "Next.js TypeScript MERN Stack custom CRM for booking party rentals, managing inventory, and processing payments.",
+    image: "https://www.satxbounce.com/apple-touch-icon.png",
+    gitUrl: "https://github.com/cboydstun/bounce-v3",
+    previewUrl: "https://satxbounce.com",
+    tags: ["Next.js", "Node.js", "MongoDB", "PayPal"],
     tag: ["All", "Web"],
   },
   {
